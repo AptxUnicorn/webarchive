@@ -1,0 +1,221 @@
+:root {
+    --header-image: url('https://imgs.search.brave.com/yjylYuEmMSpkIE9jircf2Jik4L3M28NkebXK2QSfkjU/rs:fit:640:480:1/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vbWVtb2xp/dGlvbi5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTMvMDkv/Nzk0YmExZDVhNGRk/YmE0MDFjMzIxOTcz/NDdhMTQzMmNfb3Jp/Z2luYWwuZ2lmP2Zp/dD02NDAlMkM0ODA.gif');
+    --body-bg-image: url('https://imgs.search.brave.com/W97j1iHEJ6CoigcuMZ-uj9cjTmY8_yTzPPoFoCRJVFE/rs:fit:697:700:1/g:ce/aHR0cHM6Ly93d3cu/c29jaWVkZWxpYy5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTcvMDQvcHN5Y2hl/ZGVsaWMtZ2lmLmdp/Zg.gif');
+    --trippy1-image: url('https://apotoxinwebpage.neocities.org/images/5ff441b38b460e90412b5c7c73b90826.gif');
+    --trippy2-image: url('https://www.iliketowastemytime.com/sites/default/files/best-gifs-7-trippy.gif');
+    --trippy3-image: url('https://apotoxinwebpage.neocities.org/images/MUSHroom.gif');
+   /* colors */
+    --content: #3c6e25;
+}
+/*first header : https://apotoxinwebpage.neocities.org/images/F87.gif background :https://apotoxinwebpage.neocities.org/images/giphy%20(1).gif*/
+@font-face {
+    font-family: Pixeld;
+    src: url('https://apotoxinwebpage.neocities.org/Fonts/ADDSBP__.TTF');
+}
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+}
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
+    font-style: italic;
+    font-weight: bold;
+}
+body {
+    font-family: 'Pixeld', 'Nunito', sans-serif;
+    margin: 0;
+    background-color: #465a17;
+    background-size: 500px;
+    color: #f0eff0;
+    background-image: var(--body-bg-image);
+}
+* {
+    box-sizing: border-box;
+}
+#container {
+    max-width: 1000px;
+   /* this is the width of your layout! */
+   /* if you change the above value, scroll to the bottom and change the media query according to the comment! */
+    margin: 0 auto;
+   /* this centers the entire page */
+}
+/* the area below is for all links on your page EXCEPT for the navigation */
+#container a {
+    color: #f56464;
+    font-weight: bold;
+   /* if you want to remove the underline you can add a line below here that says: text-decoration:none;
+    */
+}
+#header {
+    width: 100%;
+    background-color: #9cc245;
+   /* header color here! */
+    height: 150px;
+   /* this is only for a background image! */
+   /* if you want to put images IN the header, you can add them directly to the <div id="header"></div> element! */
+    background-image: var(--header-image);
+    background-size: cover;
+}
+/* navigation section!! */
+#navbar {
+    height: 40px;
+    background-color: #2d0909;
+   /* navbar color */
+    width: 100%;
+}
+#navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+#navbar li {
+    padding-top: 10px;
+}
+/* navigation links*/
+#navbar li a {
+    color: #f56464;
+   /* navbar text color */
+    font-weight: 800;
+    text-decoration: none;
+   /* this removes the underline */
+}
+/* navigation link when a link is hovered over */
+#navbar li a:hover {
+    color: #9cba9c;
+    text-decoration: underline;
+}
+#flex {
+    display: flex;
+}
+/* this colors BOTH sidebars if you want to style them separately, create styles for #leftSidebar and #rightSidebar */
+aside {
+    background-color: #681818;
+    width: 200px;
+    padding: 20px;
+    font-size: smaller;
+   /* this makes the sidebar text slightly smaller */
+}
+asidemain {
+    background-color: #681818;
+    width: 400px;
+    padding: 20px;
+    font-size: smaller;
+}
+/* this is the color of the main content area, between the sidebars! */
+main {
+    background-color: #861818;
+    flex: 1;
+    padding: 20px;
+    order: 2;
+}
+/* what's this "order" stuff about?? allow me to explain! if you're using both sidebars, the "order" value tells the CSS the order in which to display them. left sidebar is 1, content is 2, and right sidebar is 3! */
+#leftSidebar {
+    order: 1;
+}
+#rightSidebar {
+    order: 3;
+}
+#rightSidebarL {
+    order: 3;
+    width: 400px;
+}
+footer {
+    background-color: #2d0909;
+   /* background color for footer */
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+   /* this centers the footer text */
+}
+h1, h2, h3 {
+    color: #64f590;
+}
+h1 {
+    font-size: 25px;
+}
+strong {
+   /* this styles bold text */
+    color: #64f590;
+}
+/* this is just a cool box, it's the darker colored one */
+.box {
+    background-color: #2d0909;
+    border: 1px solid #f56464;
+    padding: 10px;
+}
+.boxgif1 {
+    background-image: var(--trippy1-image);
+    border: 1px solid #f56464;
+    padding: 10px;
+    height: 500px;
+    width: 160px;
+    background-size: cover;
+}
+.boxgif2 {
+    background-image: var(--trippy2-image);
+    border: 1px solid #f56464;
+    padding: 10px;
+    height: 240px;
+    width: 160px;
+    background-size: contain;
+}
+.boxgif3 {
+    background-image: var(--trippy3-image);
+    border: 1px solid #f56464;
+    padding: 10px;
+    height: 220px;
+    width: 160px;
+    background-size: cover;
+}
+/* CSS for extras */
+#topBar {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    font-size: smaller;
+    background-color: #2d0909;
+}
+ #center {
+     text-align: center
+}
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+/* so you wanna change the width of your page? by default, the container width is 900px. in order to keep things responsive, take your new height, and then subtrack it by 100. use this new number as the "max-width" value below */
+@media only screen and (max-width: 900px) {
+    #flex {
+        flex-wrap: wrap;
+   }
+    aside {
+        width: 100%;
+   }
+    asidemain {
+        width: 100%;
+   }
+   /* the order of the items is adjusted here for responsiveness! since the sidebars would be too small on a mobile device. feel free to play around with the order! */
+    main {
+        order: 1;
+   }
+    #leftSidebar {
+        order: 2;
+   }
+    #rightSidebar {
+        order: 3;
+   }
+    #navbar ul {
+        flex-wrap: wrap;
+   }
+}
